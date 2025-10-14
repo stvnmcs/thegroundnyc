@@ -1,0 +1,151 @@
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    /* Hero text scaling */
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    /* Navigation becomes vertical or stacked */
+    nav ul {
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.8);
+      position: fixed;
+      top: 0;
+      right: -100%; /* hide initially */
+      height: 100vh;
+      width: 200px;
+      padding-top: 60px;
+      transition: right 0.3s ease;
+    }
+  
+    nav li {
+      margin: 20px 0;
+      text-align: center;
+    }
+  
+    /* Hamburger toggle button */
+    header {
+      justify-content: space-between;
+    }
+  
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+  }
+  
+  /* Desktop hamburger hidden */
+  .hamburger {
+    display: none;
+  }
+  
+  /* Reset and base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Navigation */
+  header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav li {
+    margin-left: 30px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #ffcc00; /* accent color */
+  }
+  
+  /* Hero section */
+  .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: #ccc;
+  }
+  
+
+  /* Hamburger styling */
+.hamburger {
+    display: none; /* desktop hidden */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+  }
+  
+  /* Show hamburger on mobile */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 200px;
+      background-color: rgba(0,0,0,0.9);
+      padding-top: 60px;
+      transition: right 0.3s ease;
+    }
+  
+    nav li {
+      margin: 20px 0;
+      text-align: center;
+    }
+  }
+  
