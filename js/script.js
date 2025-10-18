@@ -7,7 +7,15 @@ hamburger.addEventListener('click', () => {
 });
 
 document.querySelectorAll('.nav-link').forEach(link =>
-  link.addEventListener('click', () => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
   })
