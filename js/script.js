@@ -30,4 +30,3 @@ document.addEventListener('click', (event) => {
     navMenu.classList.remove('active');
   }
 });
-
